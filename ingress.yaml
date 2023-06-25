@@ -3,7 +3,13 @@ kind: Ingress
 metadata:
   name: react-app-ingress
   namespace: backend
+  annotations:
+    cert-manager.io/issuer: letsencrypt-nginx
 spec:
+  tls:
+    - hosts:
+        - react.piranon.com
+      secretName: letsencrypt-nginx-echo
   rules:
     - host: react.piranon.com
       http:
