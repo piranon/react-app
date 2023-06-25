@@ -9,7 +9,7 @@ spec:
   tls:
     - hosts:
         - react.piranon.com
-      secretName: letsencrypt-nginx-echo
+      secretName: letsencrypt-nginx-react
   rules:
     - host: react.piranon.com
       http:
